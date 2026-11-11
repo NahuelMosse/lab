@@ -143,7 +143,7 @@ try {
     console.log(`${f.repo}: ${f.copy.join(", ")} -> ${f.path}`);
   }
 
-  for (const p of ["index.html", "home.css", "fonts"]) cpSync(join(root, p), join(staticDir, p), { recursive: true });
+  for (const p of ["index.html", "home.css", "favicon.svg", "fonts"]) cpSync(join(root, p), join(staticDir, p), { recursive: true });
 
   writeFileSync(
     join(out, "config.json"),
