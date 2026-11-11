@@ -2,17 +2,45 @@
  "url": "http://localhost:52357/",
  "intent": null,
  "kind": "landing",
- "brand": null,
+ "brand": {
+  "file": "DESIGN.md",
+  "fonts": [
+   "Courier Prime"
+  ],
+  "colors": [
+   "#d2231b",
+   "#c41f17",
+   "#db675e",
+   "#ede4d0",
+   "#9a9283",
+   "#0d1117",
+   "#ffffff",
+   "#0c0c0b",
+   "#6b655a"
+  ],
+  "actions": [
+   "#d2231b"
+  ],
+  "backgrounds": [
+   "#d2231b",
+   "#c41f17",
+   "#0d1117",
+   "#ffffff"
+  ],
+  "sheetHash": "4f8b9e5e8499b2cd0753e458a2e34b848d8c694732ed04ff04d17ba21e81105c"
+ },
  "gpu": false,
  "path": "non-gpu",
  "cta": {
   "1440x900": {
-   "none": true,
-   "reason": "no candidate"
+   "text": "Skip to experiments",
+   "selector": "a.skip",
+   "reason": "filled control, below the first viewport, largest"
   },
   "390x844": {
-   "none": true,
-   "reason": "no candidate"
+   "text": "Skip to experiments",
+   "selector": "a.skip",
+   "reason": "filled control, below the first viewport, largest"
   }
  },
  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 (0x00001F08) Direct3D11 vs_5_0 ps_5_0, D3D11)",
@@ -40,9 +68,7 @@
    },
    "responsive": {
     "width": 1440,
-    "tapSmall": [
-     "a.skip 229x43"
-    ],
+    "tapSmall": [],
     "clickSmall": [],
     "medianButton": null,
     "hoverOnly": [],
@@ -56,7 +82,12 @@
      "max": 0
     },
     "coveredPct": 0,
-    "cta": null,
+    "cta": {
+     "name": "a.skip 229x55",
+     "topPct": -7,
+     "bottomPct": -1,
+     "pinned": false
+    },
     "nav": {
      "bottomBar": false,
      "hamburger": false,
@@ -136,8 +167,8 @@
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: focal 2% under 15%; 5 compete (max 3); 90% empty (max 70%)",
-      "frame 2: focal 2% under 15%; 5 compete (max 3); 91% empty (max 70%)"
+      "frame 1: focal 2% under 15%; 7 compete (max 3); 87% empty (max 70%)",
+      "frame 2: focal 2% under 15%; 7 compete (max 3); 88% empty (max 70%)"
      ]
     },
     {
@@ -146,8 +177,8 @@
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: 90% empty, focal 2%",
-      "frame 2: 91% empty, focal 2%"
+      "frame 1: 87% empty, focal 2%",
+      "frame 2: 88% empty, focal 2%"
      ]
     },
     {
@@ -198,19 +229,28 @@
      "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
      "pass": false,
      "detail": [
-      "CTA a.skip \"Skip to experiments\" fill #ffffff L 1.00",
-      "adjacent background #ffffff L 1.00: ΔL 0.00 ΔC 0.00 Δh 0°",
-      "body text #6b655a L 0.51: ΔL 0.49 ΔC 0.02 Δh 7°",
-      "muted text #c41f17 L 0.53: ΔL 0.47 ΔC 0.20 Δh 61°"
+      "CTA a.skip \"Skip to experiments\" fill #c41f17 L 0.53",
+      "adjacent background #ffffff L 1.00: ΔL 0.47 ΔC 0.20 Δh 61°",
+      "body text #6b655a L 0.51: ΔL 0.02 ΔC 0.18 Δh 54°",
+      "muted text #c41f17 L 0.53: ΔL 0.00 ΔC 0.00 Δh 0°"
+     ]
+    },
+    {
+     "rule": "palette: accent reserved",
+     "value": 0,
+     "range": "<= 2 other controls (the accent also colors non-actions)",
+     "pass": true,
+     "detail": [
+      "non-action p.brand \"lab.nawi.dev\""
      ]
     },
     {
      "rule": "palette: roles",
-     "value": "3 text / 1 background",
+     "value": "5 text / 1 background",
      "range": "report only: text colors and background colors apart",
      "pass": true,
      "detail": [
-      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51",
+      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51, #10100f L 0.17, #6e685d L 0.52",
       "background #ffffff L 1.00"
      ],
      "report": true
@@ -229,52 +269,68 @@
      "pass": true,
      "detail": [
       "p.brand \"lab.nawi.dev\" #c41f17 on #ffffff Lc 78 (11px)",
+      "p \"A sourdough bakery i\" #6e685d on #ffffff Lc 78 (18px)",
       "p \"Landing page for a f\" #6b655a on #ffffff Lc 79 (18px)",
-      "h1 \"Experiments by Nahue\" #0c0c0b on #ffffff Lc 106 (48px)",
-      "a \"Open\" #0c0c0b on #ffffff Lc 106 (13px)"
+      "h2 \"Miga\" #10100f on #ffffff Lc 105 (24px)",
+      "a \"Open\" #10100f on #ffffff Lc 105 (13px)"
      ]
     },
     {
-     "rule": "brand: fonts",
-     "value": 1,
-     "range": "report only: no brand sheet with fonts",
+     "rule": "brand: fonts in the brand sheet",
+     "value": 0,
+     "range": "0 families outside Courier Prime",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "brand: primary action color in the brand sheet",
+     "value": 0.03,
+     "range": "<= 0.06 OKLab from an action color of the sheet",
      "pass": true,
      "detail": [
-      "Courier Prime x21 (a \"Skip to experiments\")"
-     ],
-     "report": true
+      "primary action #c41f17, nearest #d2231b (ΔL 0.029, tint 0.010)"
+     ]
+    },
+    {
+     "rule": "brand: page background color in the brand sheet",
+     "value": 0,
+     "range": "tint <= 0.008 and lightness <= 0.03 from a background color of the sheet",
+     "pass": true,
+     "detail": [
+      "page background #ffffff, nearest #ffffff (ΔL 0.000, tint 0.000)"
+     ]
     }
    ],
    "frames": [
     {
      "frame": 1,
      "y": 0,
-     "n": 11,
+     "n": 12,
      "focalShare": 0.023,
      "focalKind": "text",
-     "competing": 5,
+     "competing": 7,
      "axes": 3,
-     "empty": 0.898,
+     "empty": 0.869,
      "flags": [
       "focal 2% under 15%",
-      "5 compete (max 3)",
-      "90% empty (max 70%)"
+      "7 compete (max 3)",
+      "87% empty (max 70%)"
      ],
      "reported": []
     },
     {
      "frame": 2,
-     "y": 18,
-     "n": 11,
+     "y": 76,
+     "n": 12,
      "focalShare": 0.023,
      "focalKind": "text",
-     "competing": 5,
+     "competing": 7,
      "axes": 3,
-     "empty": 0.907,
+     "empty": 0.876,
      "flags": [
       "focal 2% under 15%",
-      "5 compete (max 3)",
-      "91% empty (max 70%)"
+      "7 compete (max 3)",
+      "88% empty (max 70%)"
      ],
      "reported": []
     }
@@ -297,7 +353,7 @@
    "scrub": null,
    "layout": {
     "hero": {
-     "n": 11,
+     "n": 12,
      "span": 0.442,
      "widest": 0.442
     },
@@ -318,18 +374,15 @@
     "sizes": [
      11,
      13,
-     14,
      18,
      24,
      32
     ],
-    "sizeCount": 6
+    "sizeCount": 5
    },
    "responsive": {
     "width": 390,
-    "tapSmall": [
-     "a.skip 229x43"
-    ],
+    "tapSmall": [],
     "clickSmall": [],
     "medianButton": null,
     "hoverOnly": [],
@@ -343,7 +396,12 @@
      "max": 0
     },
     "coveredPct": 0,
-    "cta": null,
+    "cta": {
+     "name": "a.skip 229x55",
+     "topPct": -8,
+     "bottomPct": -1,
+     "pinned": false
+    },
     "nav": {
      "bottomBar": false,
      "hamburger": false,
@@ -379,7 +437,7 @@
     },
     {
      "rule": "font sizes, first viewport",
-     "value": 6,
+     "value": 5,
      "range": "<= 9",
      "pass": true
     },
@@ -391,12 +449,10 @@
     },
     {
      "rule": "tap targets under 44x44",
-     "value": 1,
+     "value": 0,
      "range": "0",
-     "pass": false,
-     "detail": [
-      "a.skip 229x43"
-     ]
+     "pass": true,
+     "detail": []
     },
     {
      "rule": "hover-only reveals",
@@ -435,10 +491,13 @@
     },
     {
      "rule": "cta in first viewport (% of height)",
-     "value": "no button or link",
-     "range": "n/a",
+     "value": "-8--1",
+     "range": "inside the first viewport; lower half recommended",
      "pass": true,
-     "detail": []
+     "detail": [
+      "a.skip 229x55"
+     ],
+     "warn": true
     },
     {
      "rule": "navigation, compact",
@@ -460,8 +519,8 @@
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: focal 10% under 15%; 5 compete (max 3)",
-      "frame 2: focal 10% under 15%; 5 compete (max 3)"
+      "frame 1: focal 10% under 15%; 7 compete (max 3)",
+      "frame 2: focal 10% under 15%; 7 compete (max 3)"
      ]
     },
     {
@@ -519,10 +578,19 @@
      "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
      "pass": false,
      "detail": [
-      "CTA a.skip \"Skip to experiments\" fill #ffffff L 1.00",
-      "adjacent background #ffffff L 1.00: ΔL 0.00 ΔC 0.00 Δh 0°",
-      "body text #6b655a L 0.51: ΔL 0.49 ΔC 0.02 Δh 7°",
-      "muted text #c41f17 L 0.53: ΔL 0.47 ΔC 0.20 Δh 61°"
+      "CTA a.skip \"Skip to experiments\" fill #c41f17 L 0.53",
+      "adjacent background #ffffff L 1.00: ΔL 0.47 ΔC 0.20 Δh 61°",
+      "body text #6b655a L 0.51: ΔL 0.02 ΔC 0.18 Δh 54°",
+      "muted text #c41f17 L 0.53: ΔL 0.00 ΔC 0.00 Δh 0°"
+     ]
+    },
+    {
+     "rule": "palette: accent reserved",
+     "value": 0,
+     "range": "<= 2 other controls (the accent also colors non-actions)",
+     "pass": true,
+     "detail": [
+      "non-action p.brand \"lab.nawi.dev\""
      ]
     },
     {
@@ -556,44 +624,59 @@
      ]
     },
     {
-     "rule": "brand: fonts",
-     "value": 1,
-     "range": "report only: no brand sheet with fonts",
+     "rule": "brand: fonts in the brand sheet",
+     "value": 0,
+     "range": "0 families outside Courier Prime",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "brand: primary action color in the brand sheet",
+     "value": 0.03,
+     "range": "<= 0.06 OKLab from an action color of the sheet",
      "pass": true,
      "detail": [
-      "Courier Prime x21 (a \"Skip to experiments\")"
-     ],
-     "report": true
+      "primary action #c41f17, nearest #d2231b (ΔL 0.029, tint 0.010)"
+     ]
+    },
+    {
+     "rule": "brand: page background color in the brand sheet",
+     "value": 0,
+     "range": "tint <= 0.008 and lightness <= 0.03 from a background color of the sheet",
+     "pass": true,
+     "detail": [
+      "page background #ffffff, nearest #ffffff (ΔL 0.000, tint 0.000)"
+     ]
     }
    ],
    "frames": [
     {
      "frame": 1,
      "y": 0,
-     "n": 11,
+     "n": 10,
      "focalShare": 0.096,
      "focalKind": "text",
-     "competing": 5,
+     "competing": 7,
      "axes": 2,
-     "empty": 0.655,
+     "empty": 0.572,
      "flags": [
       "focal 10% under 15%",
-      "5 compete (max 3)"
+      "7 compete (max 3)"
      ],
      "reported": []
     },
     {
      "frame": 2,
-     "y": 55,
-     "n": 11,
+     "y": 167,
+     "n": 12,
      "focalShare": 0.096,
      "focalKind": "text",
-     "competing": 5,
+     "competing": 7,
      "axes": 2,
-     "empty": 0.658,
+     "empty": 0.557,
      "flags": [
       "focal 10% under 15%",
-      "5 compete (max 3)"
+      "7 compete (max 3)"
      ],
      "reported": []
     }
@@ -616,7 +699,7 @@
    "scrub": null,
    "layout": {
     "hero": {
-     "n": 11,
+     "n": 12,
      "span": 0.913,
      "widest": 0.913
     },
@@ -625,13 +708,7 @@
    "product": null
   }
  },
- "console": [
-  {
-   "width": "1440x900",
-   "type": "error",
-   "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
-  }
- ],
+ "console": [],
  "captures": [
   "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0000ms.png",
   "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0600ms.png",
@@ -642,13 +719,13 @@
  ],
  "load": {
   "waves": [
-   900,
-   1200,
-   1400
+   800,
+   1000,
+   1300
   ],
   "gapsMs": [
-   300,
-   200
+   200,
+   300
   ],
   "totalMs": 917,
   "rules": [
@@ -660,7 +737,7 @@
    },
    {
     "rule": "load wave gap (ms)",
-    "value": "300/200",
+    "value": "200/300",
     "range": "200-300",
     "pass": true
    },

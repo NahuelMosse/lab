@@ -60,9 +60,9 @@ a { color: inherit; }
   position: absolute;
   left: 16px;
   top: -64px;
-  padding: 8px 12px;
-  background: var(--bg);
-  color: var(--fg);
+  padding: 14px 12px;
+  background: var(--red);
+  color: #fff;
 }
 .skip:focus { top: 8px; }
 
