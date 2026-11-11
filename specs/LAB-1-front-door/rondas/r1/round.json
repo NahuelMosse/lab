@@ -1,0 +1,667 @@
+{
+ "url": "http://localhost:52357/",
+ "intent": null,
+ "kind": "landing",
+ "brand": {
+  "file": "specs/LAB-1-front-door/card.md",
+  "fonts": [],
+  "sheetHash": "84249d590dd77f9c7739384c9a376a67213cf53a711f00fd6fa857e0aa78e29d"
+ },
+ "gpu": false,
+ "path": "non-gpu",
+ "cta": {
+  "1440x900": {
+   "none": true,
+   "reason": "no candidate"
+  },
+  "390x844": {
+   "none": true,
+   "reason": "no candidate"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 (0x00001F08) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "software": false,
+ "widths": {
+  "1440x900": {
+   "measure": {
+    "grain": false,
+    "displayPx": 48,
+    "ratio": 2.67,
+    "displayLineHeight": 1.15,
+    "displayTrackingEm": 0,
+    "displaySample": "h1 \"Experiments by Nahue\"",
+    "displayLate": false,
+    "bodyTrackingEm": 0,
+    "sizes": [
+     11,
+     13,
+     14,
+     18,
+     24,
+     48
+    ],
+    "sizeCount": 6
+   },
+   "responsive": {
+    "width": 1440,
+    "tapSmall": [
+     "a.skip 229x43",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38"
+    ],
+    "clickSmall": [],
+    "medianButton": null,
+    "hoverOnly": [],
+    "smallFields": [],
+    "overflow": {
+     "scrollWidth": 1440,
+     "clientWidth": 1440
+    },
+    "queries": {
+     "min": 2,
+     "max": 0
+    },
+    "coveredPct": 0,
+    "cta": null,
+    "nav": {
+     "bottomBar": false,
+     "hamburger": false,
+     "hamburgerLabeled": false
+    }
+   },
+   "rules": [
+    {
+     "rule": "display/body ratio",
+     "value": 2.67,
+     "range": "report only: winners median 2.9x, 2-9x",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display line height",
+     "value": 1.15,
+     "range": "report only: winners median 1.0",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display tracking (em)",
+     "value": 0,
+     "range": "-0.03..-0.02",
+     "pass": false
+    },
+    {
+     "rule": "body tracking (em)",
+     "value": 0,
+     "range": "0..0.02",
+     "pass": true
+    },
+    {
+     "rule": "font sizes, first viewport",
+     "value": 6,
+     "range": "<= 9",
+     "pass": true
+    },
+    {
+     "rule": "grain or noise",
+     "value": "no",
+     "range": "a texture, or none declared",
+     "pass": false
+    },
+    {
+     "rule": "hamburger, expanded",
+     "value": "no",
+     "range": "no",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "clicks of 24x24 or less",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "median button height",
+     "value": "no buttons",
+     "range": "< 48 (all 48+ is a stretched mobile)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "dead clicks",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "frames with 2+ flags",
+     "value": 1,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: focal 2% under 15%; 5 compete (max 3); 91% empty (max 70%)"
+     ]
+    },
+    {
+     "rule": "void frames (>70% empty, no focal)",
+     "value": 1,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: 91% empty, focal 2%"
+     ]
+    },
+    {
+     "rule": "image file width >= shown x 2",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "pasted boxes",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "repeated images",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "broken images (naturalWidth 0)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "alt text painted as page text",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "LCP image",
+     "value": "not an image",
+     "range": "n/a",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: CTA separation (OKLCH)",
+     "value": 0,
+     "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
+     "pass": false,
+     "detail": [
+      "CTA a.skip \"Skip to experiments\" fill #ffffff L 1.00",
+      "adjacent background #ffffff L 1.00: ΔL 0.00 ΔC 0.00 Δh 0°",
+      "body text #6b655a L 0.51: ΔL 0.49 ΔC 0.02 Δh 7°",
+      "muted text #c41f17 L 0.53: ΔL 0.47 ΔC 0.20 Δh 61°"
+     ]
+    },
+    {
+     "rule": "palette: roles",
+     "value": "3 text / 1 background",
+     "range": "report only: text colors and background colors apart",
+     "pass": true,
+     "detail": [
+      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51",
+      "background #ffffff L 1.00"
+     ],
+     "report": true
+    },
+    {
+     "rule": "palette: text contrast (WCAG AA)",
+     "value": 0,
+     "range": "0 pairs under 4.5:1 (3:1 large)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: APCA Lc (report)",
+     "value": 78,
+     "range": "reported: body >= 75, loose text >= 30",
+     "pass": true,
+     "detail": [
+      "p.brand \"lab.nawi.dev\" #c41f17 on #ffffff Lc 78 (11px)",
+      "p \"Landing page for a f\" #6b655a on #ffffff Lc 79 (18px)",
+      "h1 \"Experiments by Nahue\" #0c0c0b on #ffffff Lc 106 (48px)",
+      "a \"Open\" #0c0c0b on #ffffff Lc 106 (13px)"
+     ]
+    },
+    {
+     "rule": "brand: fonts",
+     "value": 1,
+     "range": "report only: no brand sheet with fonts",
+     "pass": true,
+     "detail": [
+      "Courier Prime x21 (a \"Skip to experiments\")"
+     ],
+     "report": true
+    }
+   ],
+   "frames": [
+    {
+     "frame": 1,
+     "y": 0,
+     "n": 11,
+     "focalShare": 0.023,
+     "focalKind": "text",
+     "competing": 5,
+     "axes": 3,
+     "empty": 0.909,
+     "flags": [
+      "focal 2% under 15%",
+      "5 compete (max 3)",
+      "91% empty (max 70%)"
+     ],
+     "reported": []
+    }
+   ],
+   "images": {
+    "low": [],
+    "pasted": [],
+    "unknown": [],
+    "repeated": [],
+    "lcp": null,
+    "sizes": [],
+    "broken": [],
+    "altShown": []
+   },
+   "sweep": {
+    "checked": 8,
+    "dead": []
+   },
+   "canvas": [],
+   "scrub": null,
+   "layout": {
+    "hero": {
+     "n": 11,
+     "span": 0.442,
+     "widest": 0.442
+    },
+    "sections": []
+   },
+   "product": null
+  },
+  "390x844": {
+   "measure": {
+    "grain": false,
+    "displayPx": 32,
+    "ratio": 1.78,
+    "displayLineHeight": 1.15,
+    "displayTrackingEm": 0,
+    "displaySample": "h1 \"Experiments by Nahue\"",
+    "displayLate": false,
+    "bodyTrackingEm": 0,
+    "sizes": [
+     11,
+     13,
+     14,
+     18,
+     24,
+     32
+    ],
+    "sizeCount": 6
+   },
+   "responsive": {
+    "width": 390,
+    "tapSmall": [
+     "a.skip 229x43",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38",
+     "a 43x38"
+    ],
+    "clickSmall": [],
+    "medianButton": null,
+    "hoverOnly": [],
+    "smallFields": [],
+    "overflow": {
+     "scrollWidth": 390,
+     "clientWidth": 390
+    },
+    "queries": {
+     "min": 2,
+     "max": 0
+    },
+    "coveredPct": 0,
+    "cta": null,
+    "nav": {
+     "bottomBar": false,
+     "hamburger": false,
+     "hamburgerLabeled": false
+    }
+   },
+   "rules": [
+    {
+     "rule": "display/body ratio",
+     "value": 1.78,
+     "range": "report only: winners median 2.9x, 2-9x",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display line height",
+     "value": 1.15,
+     "range": "report only: winners median 1.0",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display tracking (em)",
+     "value": 0,
+     "range": "-0.03..-0.02",
+     "pass": false
+    },
+    {
+     "rule": "body tracking (em)",
+     "value": 0,
+     "range": "0..0.02",
+     "pass": true
+    },
+    {
+     "rule": "font sizes, first viewport",
+     "value": 6,
+     "range": "<= 9",
+     "pass": true
+    },
+    {
+     "rule": "grain or noise",
+     "value": "no",
+     "range": "a texture, or none declared",
+     "pass": false
+    },
+    {
+     "rule": "tap targets under 44x44",
+     "value": 7,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "a.skip 229x43",
+      "a 43x38",
+      "a 43x38",
+      "a 43x38",
+      "a 43x38",
+      "a 43x38",
+      "a 43x38"
+     ]
+    },
+    {
+     "rule": "hover-only reveals",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "inputs under 16 px",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "document overflow",
+     "value": "none",
+     "range": "none",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "media queries",
+     "value": "min 2 / max 0",
+     "range": "min >= max",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "fixed layers (% of viewport, no canvas or scene)",
+     "value": 0,
+     "range": "<= 20",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "cta in first viewport (% of height)",
+     "value": "no button or link",
+     "range": "n/a",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "navigation, compact",
+     "value": "none",
+     "range": "bottom bar or labeled menu",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "dead clicks",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "frames with 2+ flags",
+     "value": 1,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: focal 10% under 15%; 5 compete (max 3)"
+     ]
+    },
+    {
+     "rule": "void frames (>70% empty, no focal)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "image file width >= shown x 2",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "pasted boxes",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "repeated images",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "broken images (naturalWidth 0)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "alt text painted as page text",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "LCP image",
+     "value": "not an image",
+     "range": "n/a",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: CTA separation (OKLCH)",
+     "value": 0,
+     "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
+     "pass": false,
+     "detail": [
+      "CTA a.skip \"Skip to experiments\" fill #ffffff L 1.00",
+      "adjacent background #ffffff L 1.00: ΔL 0.00 ΔC 0.00 Δh 0°",
+      "body text #6b655a L 0.51: ΔL 0.49 ΔC 0.02 Δh 7°",
+      "muted text #c41f17 L 0.53: ΔL 0.47 ΔC 0.20 Δh 61°"
+     ]
+    },
+    {
+     "rule": "palette: roles",
+     "value": "3 text / 1 background",
+     "range": "report only: text colors and background colors apart",
+     "pass": true,
+     "detail": [
+      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51",
+      "background #ffffff L 1.00"
+     ],
+     "report": true
+    },
+    {
+     "rule": "palette: text contrast (WCAG AA)",
+     "value": 0,
+     "range": "0 pairs under 4.5:1 (3:1 large)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: APCA Lc (report)",
+     "value": 78,
+     "range": "reported: body >= 75, loose text >= 30",
+     "pass": true,
+     "detail": [
+      "p.brand \"lab.nawi.dev\" #c41f17 on #ffffff Lc 78 (11px)",
+      "p \"Landing page for a f\" #6b655a on #ffffff Lc 79 (18px)",
+      "h1 \"Experiments by Nahue\" #0c0c0b on #ffffff Lc 106 (32px)",
+      "a \"Open\" #0c0c0b on #ffffff Lc 106 (13px)"
+     ]
+    },
+    {
+     "rule": "brand: fonts",
+     "value": 1,
+     "range": "report only: no brand sheet with fonts",
+     "pass": true,
+     "detail": [
+      "Courier Prime x21 (a \"Skip to experiments\")"
+     ],
+     "report": true
+    }
+   ],
+   "frames": [
+    {
+     "frame": 1,
+     "y": 0,
+     "n": 11,
+     "focalShare": 0.096,
+     "focalKind": "text",
+     "competing": 5,
+     "axes": 2,
+     "empty": 0.66,
+     "flags": [
+      "focal 10% under 15%",
+      "5 compete (max 3)"
+     ],
+     "reported": []
+    }
+   ],
+   "images": {
+    "low": [],
+    "pasted": [],
+    "unknown": [],
+    "repeated": [],
+    "lcp": null,
+    "sizes": [],
+    "broken": [],
+    "altShown": []
+   },
+   "sweep": {
+    "checked": 8,
+    "dead": []
+   },
+   "canvas": [],
+   "scrub": null,
+   "layout": {
+    "hero": {
+     "n": 11,
+     "span": 0.913,
+     "widest": 0.913
+    },
+    "sections": []
+   },
+   "product": null
+  }
+ },
+ "console": [
+  {
+   "width": "390x844",
+   "type": "error",
+   "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+  }
+ ],
+ "captures": [
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0600ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-2000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-0000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-0600ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-2000ms.png"
+ ],
+ "load": {
+  "waves": [
+   400,
+   600,
+   800
+  ],
+  "gapsMs": [
+   200,
+   200
+  ],
+  "totalMs": 817,
+  "rules": [
+   {
+    "rule": "load waves",
+    "value": 3,
+    "range": "2-3",
+    "pass": true
+   },
+   {
+    "rule": "load wave gap (ms)",
+    "value": "200/200",
+    "range": "200-300",
+    "pass": true
+   },
+   {
+    "rule": "load total (ms)",
+    "value": 817,
+    "range": "900-2000",
+    "pass": false
+   }
+  ]
+ },
+ "motion": {
+  "report": "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\motion\\report.json",
+  "staggerMs": 200
+ }
+}

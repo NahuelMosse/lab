@@ -99,7 +99,7 @@ h1 {
   border-bottom: 2px solid color-mix(in srgb, var(--red) 50%, transparent);
   transition: border-color 600ms var(--ease), transform 600ms var(--ease);
   animation: enter 600ms var(--ease) both;
-  animation-delay: calc(var(--i) * 80ms);
+  animation-delay: calc(var(--i) * 200ms);
 }
 
 .item:hover,

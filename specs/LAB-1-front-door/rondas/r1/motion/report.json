@@ -1,0 +1,1491 @@
+{
+ "url": "http://localhost:52357/",
+ "cpu": 0,
+ "elements": [
+  {
+   "label": "a “Skip to experiments” [0]",
+   "kind": "focus-only",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "all"
+    ],
+    "durations": [
+     0
+    ],
+    "easings": [
+     "ease"
+    ]
+   },
+   "moments": {
+    "focus": {
+     "changed": [
+      "outline-style",
+      "outline-width",
+      "outline-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "all"
+     ],
+     "values": {},
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Open Cebador” [1]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(188, 30, 23) rgb(188, 30, 23) rgba(196, 31, 23, 0.957)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Code of Cebador” [2]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(188, 30, 23) rgb(188, 30, 23) rgba(196, 31, 23, 0.96)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Open Sonría” [3]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(188, 30, 23) rgb(188, 30, 23) rgba(196, 31, 23, 0.957)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Code of Sonría” [4]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 1)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 1)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": [
+      {
+       "label": "a “Code”",
+       "root": true,
+       "primary": "translateY",
+       "startMs": 1,
+       "endMs": 18,
+       "moves": [
+        {
+         "prop": "top",
+         "from": 546.38,
+         "to": 548.38,
+         "durationMs": 17,
+         "overshootPct": 0,
+         "shape": "step",
+         "settled": true,
+         "jumps": [],
+         "startMs": 1
+        },
+        {
+         "prop": "translateY",
+         "from": 0,
+         "to": 1,
+         "durationMs": 17,
+         "overshootPct": 0,
+         "shape": "step",
+         "settled": true,
+         "jumps": [],
+         "startMs": 1
+        }
+       ]
+      },
+      {
+       "label": "span.sr “of Sonría”",
+       "root": false,
+       "primary": "top",
+       "startMs": 1,
+       "endMs": 18,
+       "moves": [
+        {
+         "prop": "top",
+         "from": 554.38,
+         "to": 556.38,
+         "durationMs": 17,
+         "overshootPct": 0,
+         "shape": "step",
+         "settled": true,
+         "jumps": [],
+         "startMs": 1
+        }
+       ]
+      }
+     ]
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(187, 30, 22)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(187, 30, 22) rgb(187, 30, 22) rgba(196, 31, 23, 0.95)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(187, 30, 22)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Open pan” [5]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(187, 30, 22)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(187, 30, 22) rgb(187, 30, 22) rgba(196, 31, 23, 0.95)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(187, 30, 22)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “Code of pan” [6]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "color",
+     "border-color"
+    ],
+    "durations": [
+     600,
+     600
+    ],
+    "easings": [
+     "cubic-bezier(0.16, 1, 0.3, 1)",
+     "cubic-bezier(0.16, 1, 0.3, 1)"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "border-color": [
+       "rgb(12, 12, 11) rgb(12, 12, 11) rgba(0, 0, 0, 0)",
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)"
+      ],
+      "outline-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(12, 12, 11)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "press": {
+     "changed": [
+      "transform",
+      "border-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "transform": [
+       "none",
+       "matrix(1, 0, 0, 1, 0, 1)"
+      ],
+      "border-color": [
+       "rgb(196, 31, 23) rgb(196, 31, 23) rgba(196, 31, 23, 0.996)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "color",
+      "border-color",
+      "outline-style",
+      "outline-width",
+      "outline-color",
+      "text-decoration-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "color",
+      "border-color"
+     ],
+     "values": {
+      "color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ],
+      "border-color": [
+       "rgb(16, 12, 11) rgb(16, 12, 11) rgba(196, 31, 23, 0.024)",
+       "rgb(188, 30, 23) rgb(188, 30, 23) rgba(196, 31, 23, 0.957)"
+      ],
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(16, 12, 11)",
+       "rgb(196, 31, 23)"
+      ],
+      "text-decoration-color": [
+       "rgb(16, 12, 11)",
+       "rgb(188, 30, 23)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  },
+  {
+   "label": "a “nawi.dev” [7]",
+   "kind": "a",
+   "selected": false,
+   "score": 0,
+   "transition": {
+    "properties": [
+     "all"
+    ],
+    "durations": [
+     0
+    ],
+    "easings": [
+     "ease"
+    ]
+   },
+   "moments": {
+    "hover": {
+     "changed": [],
+     "pixels": false,
+     "transitioned": [
+      "all"
+     ],
+     "values": {},
+     "motion": []
+    },
+    "press": {
+     "changed": [],
+     "pixels": false,
+     "transitioned": [
+      "all"
+     ],
+     "values": {},
+     "motion": []
+    },
+    "focus": {
+     "changed": [
+      "outline-style",
+      "outline-width",
+      "outline-color"
+     ],
+     "pixels": true,
+     "transitioned": [
+      "all"
+     ],
+     "values": {
+      "outline-style": [
+       "none",
+       "solid"
+      ],
+      "outline-width": [
+       "3px",
+       "2px"
+      ],
+      "outline-color": [
+       "rgb(107, 101, 90)",
+       "rgb(196, 31, 23)"
+      ]
+     },
+     "motion": []
+    }
+   }
+  }
+ ],
+ "sections": [],
+ "longFrames": [],
+ "sheets": [],
+ "load": [
+  {
+   "id": 8,
+   "label": "li.item",
+   "parent": 7,
+   "tag": "li",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "opacity",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 246.88,
+     "to": 230.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    },
+    {
+     "prop": "opacity",
+     "from": 0,
+     "to": 1,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    },
+    {
+     "prop": "translateY",
+     "from": 16,
+     "to": 0,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 9,
+   "label": "h2 “Cebador”",
+   "parent": 8,
+   "tag": "h2",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 262.88,
+     "to": 246.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 10,
+   "label": "p “Landing page for a ficti”",
+   "parent": 8,
+   "tag": "p",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 302.88,
+     "to": 286.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 11,
+   "label": "p.links",
+   "parent": 8,
+   "tag": "p",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 372.88,
+     "to": 356.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 12,
+   "label": "a “Open”",
+   "parent": 11,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 372.88,
+     "to": 356.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 13,
+   "label": "a “Code”",
+   "parent": 11,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 372.88,
+     "to": 356.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 446
+    }
+   ],
+   "startMs": 446,
+   "endMs": 863
+  },
+  {
+   "id": 14,
+   "label": "li.item",
+   "parent": 7,
+   "tag": "li",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "opacity",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 436.38,
+     "to": 420.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    },
+    {
+     "prop": "opacity",
+     "from": 0,
+     "to": 1,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    },
+    {
+     "prop": "translateY",
+     "from": 16,
+     "to": 0,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 15,
+   "label": "h2 “Sonría”",
+   "parent": 14,
+   "tag": "h2",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 452.38,
+     "to": 436.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 16,
+   "label": "p “One-page site for a fict”",
+   "parent": 14,
+   "tag": "p",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 492.38,
+     "to": 476.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 17,
+   "label": "p.links",
+   "parent": 14,
+   "tag": "p",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 562.38,
+     "to": 546.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 18,
+   "label": "a “Open”",
+   "parent": 17,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 562.38,
+     "to": 546.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 19,
+   "label": "a “Code”",
+   "parent": 17,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 562.38,
+     "to": 546.38,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 646
+    }
+   ],
+   "startMs": 646,
+   "endMs": 1063
+  },
+  {
+   "id": 20,
+   "label": "li.item",
+   "parent": 7,
+   "tag": "li",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "opacity",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 625.87,
+     "to": 609.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    },
+    {
+     "prop": "opacity",
+     "from": 0,
+     "to": 1,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    },
+    {
+     "prop": "translateY",
+     "from": 15.99,
+     "to": 0,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    }
+   ],
+   "startMs": 846,
+   "endMs": 1263
+  },
+  {
+   "id": 21,
+   "label": "h2 “pan”",
+   "parent": 20,
+   "tag": "h2",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 641.87,
+     "to": 625.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    }
+   ],
+   "startMs": 846,
+   "endMs": 1263
+  },
+  {
+   "id": 22,
+   "label": "p.links",
+   "parent": 20,
+   "tag": "p",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 693.87,
+     "to": 677.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    }
+   ],
+   "startMs": 846,
+   "endMs": 1263
+  },
+  {
+   "id": 23,
+   "label": "a “Open”",
+   "parent": 22,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 693.87,
+     "to": 677.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    }
+   ],
+   "startMs": 846,
+   "endMs": 1263
+  },
+  {
+   "id": 24,
+   "label": "a “Code”",
+   "parent": 22,
+   "tag": "a",
+   "h1": {
+    "is": false,
+    "inside": false,
+    "contains": false
+   },
+   "inFirst": true,
+   "fixed": false,
+   "root": false,
+   "primary": "top",
+   "moves": [
+    {
+     "prop": "top",
+     "from": 693.87,
+     "to": 677.88,
+     "durationMs": 417,
+     "overshootPct": 0,
+     "shape": "ease-out",
+     "settled": true,
+     "jumps": [],
+     "startMs": 846
+    }
+   ],
+   "startMs": 846,
+   "endMs": 1263
+  }
+ ],
+ "scrollEntrances": [],
+ "click": null,
+ "interrupt": null,
+ "scrollStory": null,
+ "roles": {
+  "cta": null,
+  "hero": {
+   "label": "li.item",
+   "prop": "opacity",
+   "startMs": 446,
+   "durationMs": 417,
+   "shape": "ease-out",
+   "overshootPct": 0,
+   "jumps": 0,
+   "stepMs": 0,
+   "totalMs": 417,
+   "viaH1": false
+  },
+  "cards": {
+   "label": "li.item",
+   "prop": "opacity",
+   "startMs": 446,
+   "durationMs": 417,
+   "shape": "ease-out",
+   "overshootPct": 0,
+   "stepMs": 200,
+   "count": 3
+  },
+  "section": null,
+  "click": null,
+  "scroll": null
+ },
+ "grammar": {
+  "durationsMs": {
+   "min": 417,
+   "median": 417,
+   "max": 417
+  },
+  "shapes": {
+   "ease-out": 17
+  },
+  "staggerMs": 200,
+  "cursor": {
+   "hover": 0,
+   "press": 1,
+   "focus": 0,
+   "of": 8
+  }
+ }
+}
