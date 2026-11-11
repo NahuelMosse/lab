@@ -1,6 +1,6 @@
-// Builds the deploy tree: node scripts/assemble.mjs <out>
-// Clones the main of every repository in experiments.json, copies what each one publishes into <out>/<slug>/
-// (functions into <out>/), adds the home and writes vercel.json and .lab-sources.json.
+// Builds the lab's Vercel Build Output (v3): node scripts/assemble.mjs [out]   (default .vercel/output)
+// Downloads the main of every repository in experiments.json, copies what each one publishes into static/<slug>/,
+// builds the functions, adds the home and writes config.json and .lab-sources.json.
 import { execFileSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -8,12 +8,9 @@ import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const outArg = process.argv[2];
-if (!outArg) throw new Error("usage: node scripts/assemble.mjs <out>");
-const out = resolve(outArg);
+const out = resolve(process.argv[2] ?? join(root, ".vercel/output"));
+const staticDir = join(out, "static");
 const { experiments, functions = [] } = JSON.parse(readFileSync(join(root, "experiments.json"), "utf8"));
-
-const git = (cwd, ...args) => execFileSync("git", args, { cwd, encoding: "utf8" }).trim();
 
 // `**` crosses directories, `*` does not.
 const globToRegExp = (glob) =>
@@ -34,7 +31,6 @@ const globToRegExp = (glob) =>
 const listFiles = (dir, base = "") =>
   readdirSync(join(dir, base), { withFileTypes: true }).flatMap((d) => {
     const rel = base ? `${base}/${d.name}` : d.name;
-    if (rel === ".git") return [];
     return d.isDirectory() ? listFiles(dir, rel) : [rel];
   });
 
@@ -45,24 +41,66 @@ const copyFile = (from, to) => {
 
 const tmp = mkdtempSync(join(tmpdir(), "lab-assemble-"));
 const sources = {};
-const clones = new Map();
+const downloads = new Map();
 
-const clone = (repo) => {
-  if (clones.has(repo)) return clones.get(repo);
-  const dir = join(tmp, repo.replace("/", "__"));
-  execFileSync("git", ["clone", "--depth", "1", "--branch", "main", `https://github.com/${repo}.git`, dir], { stdio: "inherit" });
-  sources[repo] = git(dir, "rev-parse", "HEAD");
-  clones.set(repo, dir);
+// The sha is a record only: an answer of the API that fails (rate limit) does not fail the build.
+const mainSha = async (repo, headers) => {
+  const res = await fetch(`https://api.github.com/repos/${repo}/commits/main`, { headers: { ...headers, Accept: "application/vnd.github.sha" } });
+  if (res.ok) return (await res.text()).trim();
+  console.warn(`${repo}: sha lookup answered ${res.status}`);
+  return "unknown";
+};
+
+const download = async (repo) => {
+  if (downloads.has(repo)) return downloads.get(repo);
+  const headers = process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {};
+  const res = await fetch(`https://codeload.github.com/${repo}/tar.gz/refs/heads/main`, { headers });
+  if (!res.ok) throw new Error(`${repo}: main download answered ${res.status}`);
+  const name = repo.replace("/", "__");
+  const base = join(tmp, name);
+  mkdirSync(base, { recursive: true });
+  writeFileSync(`${base}.tar.gz`, Buffer.from(await res.arrayBuffer()));
+  // relative paths: GNU tar reads "D:" of an absolute Windows path as a host
+  execFileSync("tar", ["-xzf", `${name}.tar.gz`, "-C", name], { cwd: tmp });
+  const [top] = readdirSync(base);
+  sources[repo] = await mainSha(repo, headers);
+  const dir = join(base, top);
+  downloads.set(repo, dir);
   return dir;
 };
 
+const labSha = () => {
+  if (process.env.VERCEL_GIT_COMMIT_SHA) return process.env.VERCEL_GIT_COMMIT_SHA;
+  try {
+    return execFileSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
+  } catch {
+    return "unknown";
+  }
+};
+
+// Node launcher entry: turns the Web-standard handlers (GET, POST, ...) of the repository into a (req, res) handler.
+const entry = (path, module) => `import * as handlers from "./${module}";
+
+export default async function handler(req, res) {
+  const url = new URL(req.url, "http://localhost");
+  const name = url.searchParams.get("name") ?? url.pathname.split("/").at(-1);
+  url.searchParams.delete("name");
+  url.pathname = \`/${path}/\${encodeURIComponent(name)}\`;
+  const run = handlers[req.method];
+  const answer = run ? await run(new Request(url, { method: req.method })) : new Response("Method Not Allowed", { status: 405 });
+  res.statusCode = answer.status;
+  answer.headers.forEach((value, key) => res.setHeader(key, value));
+  res.end(req.method === "HEAD" ? undefined : Buffer.from(await answer.arrayBuffer()));
+}
+`;
+
 try {
   rmSync(out, { recursive: true, force: true });
-  mkdirSync(out, { recursive: true });
+  mkdirSync(staticDir, { recursive: true });
 
   for (const e of experiments) {
-    const dir = clone(e.repo);
-    const dest = join(out, e.slug);
+    const dir = await download(e.repo);
+    const dest = join(staticDir, e.slug);
     if (e.dir) {
       const from = join(dir, e.dir);
       if (!existsSync(from) || !statSync(from).isDirectory()) throw new Error(`${e.repo}: dir "${e.dir}" is missing`);
@@ -85,27 +123,35 @@ try {
     console.log(`${e.slug}: ${listFiles(dest).length} files`);
   }
 
+  const routes = experiments.map((e) => ({ src: `^/${e.slug}$`, status: 307, headers: { Location: `/${e.slug}/` } }));
+  const functionRoutes = [];
   for (const f of functions) {
-    const dir = clone(f.repo);
+    const dir = await download(f.repo);
+    const func = join(out, "functions", `${f.path}.func`);
     for (const p of f.copy) {
-      const from = join(dir, p);
-      if (!existsSync(from)) throw new Error(`${f.repo}: "${p}" is missing`);
-      if (existsSync(join(out, p))) throw new Error(`${f.repo}: "${p}" collides with an experiment slug`);
-      cpSync(from, join(out, p), { recursive: true });
+      if (!existsSync(join(dir, p))) throw new Error(`${f.repo}: "${p}" is missing`);
+      cpSync(join(dir, p), join(func, p), { recursive: true });
     }
-    console.log(`${f.repo}: ${f.copy.join(", ")}`);
+    if (!existsSync(join(func, f.module))) throw new Error(`${f.repo}: "${f.module}" is missing`);
+    writeFileSync(join(func, "index.mjs"), entry(f.path, f.module));
+    writeFileSync(join(func, "package.json"), JSON.stringify({ type: "module" }, null, 2) + "\n");
+    writeFileSync(
+      join(func, ".vc-config.json"),
+      JSON.stringify({ runtime: "nodejs24.x", handler: "index.mjs", launcherType: "Nodejs", shouldAddHelpers: false }, null, 2) + "\n",
+    );
+    functionRoutes.push({ src: `^/${f.path}/([^/]+?)(?:\\.svg)?$`, dest: `/${f.path}?name=$1` });
+    console.log(`${f.repo}: ${f.copy.join(", ")} -> ${f.path}`);
   }
 
-  for (const p of ["index.html", "home.css", "fonts"]) cpSync(join(root, p), join(out, p), { recursive: true });
+  for (const p of ["index.html", "home.css", "fonts"]) cpSync(join(root, p), join(staticDir, p), { recursive: true });
 
-  const vercel = {
-    cleanUrls: false,
-    redirects: experiments.map((e) => ({ source: `/${e.slug}`, destination: `/${e.slug}/`, permanent: false })),
-  };
-  writeFileSync(join(out, "vercel.json"), JSON.stringify(vercel, null, 2) + "\n");
+  writeFileSync(
+    join(out, "config.json"),
+    JSON.stringify({ version: 3, routes: [...routes, { handle: "filesystem" }, ...functionRoutes] }, null, 2) + "\n",
+  );
 
-  sources.lab = git(root, "rev-parse", "HEAD");
-  writeFileSync(join(out, ".lab-sources.json"), JSON.stringify(sources, null, 2) + "\n");
+  sources.lab = labSha();
+  writeFileSync(join(staticDir, ".lab-sources.json"), JSON.stringify(sources, null, 2) + "\n");
 } finally {
   rmSync(tmp, { recursive: true, force: true });
 }

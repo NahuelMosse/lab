@@ -43,5 +43,5 @@
       "dir": "src/modules/landing/presentation"
     }
   ],
-  "functions": [{ "repo": "NahuelMosse/profile-widgets", "copy": ["api", "src"] }]
+  "functions": [{ "repo": "NahuelMosse/profile-widgets", "copy": ["api", "src"], "path": "api/profile", "module": "api/profile/[name].mjs" }]
 }
