@@ -19,12 +19,24 @@
   ],
   "rewrites": [
     {
+      "source": "/cebador/",
+      "destination": "https://nahuelmosse.github.io/cebador-landing/"
+    },
+    {
       "source": "/cebador/:path*",
       "destination": "https://nahuelmosse.github.io/cebador-landing/:path*"
     },
     {
+      "source": "/sonria/",
+      "destination": "https://nahuelmosse.github.io/sonria/"
+    },
+    {
       "source": "/sonria/:path*",
       "destination": "https://nahuelmosse.github.io/sonria/:path*"
+    },
+    {
+      "source": "/miga/",
+      "destination": "https://nahuelmosse.github.io/miga/"
     },
     {
       "source": "/miga/:path*",

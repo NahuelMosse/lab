@@ -12,7 +12,11 @@ const vercel = {
   cleanUrls: false,
   redirects: experiments.map((e) => ({ source: `/${e.slug}`, destination: `/${e.slug}/`, permanent: false })),
   rewrites: [
-    ...experiments.map((e) => ({ source: `/${e.slug}/:path*`, destination: `${e.origin}:path*` })),
+    // `/:path*` does not match the bare trailing slash, so each experiment's root gets its own rule.
+    ...experiments.flatMap((e) => [
+      { source: `/${e.slug}/`, destination: e.origin },
+      { source: `/${e.slug}/:path*`, destination: `${e.origin}:path*` },
+    ]),
     { source: "/api/profile/:path*", destination: `https://${widgets}/api/profile/:path*` },
   ],
 };
