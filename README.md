@@ -16,22 +16,22 @@ A push to the lab's main deploys through the Git integration. When a project's m
 
 `functions` lists repositories whose `copy` folders (`api`, `src`) are bundled into the function at `path`, served from `module`.
 
-Each project repository carries this workflow (`.github/workflows/notify-lab.yml`) to tell the lab when its main changes. It needs the secret `LAB_DISPATCH_TOKEN`: a fine-grained token with access to only `NahuelMosse/lab` and permission Contents: read and write.
+Each project repository carries this workflow (`.github/workflows/notify-lab.yml`), which redeploys the lab when its main changes. It needs the secret `LAB_DEPLOY_HOOK`: the URL of the lab's Vercel deploy hook, which can only start a deploy.
 
 ```yaml
-name: Notify lab
-
+name: notify lab
 on:
   push:
     branches: [main]
-
+  workflow_dispatch:
 jobs:
-  notify:
+  deploy-lab:
     runs-on: ubuntu-latest
     steps:
-      - run: gh api repos/NahuelMosse/lab/dispatches -f event_type=project-updated
+      - name: Trigger the lab's Vercel deploy hook
         env:
-          GH_TOKEN: ${{ secrets.LAB_DISPATCH_TOKEN }}
+          HOOK: ${{ secrets.LAB_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$HOOK"
 ```
 
 Test the assembly locally with `node scripts/assemble.mjs <out-dir>` (needs `tar` and Node 22+; `GITHUB_TOKEN` is optional and raises the GitHub rate limit).
@@ -41,6 +41,6 @@ Test the assembly locally with `node scripts/assemble.mjs <out-dir>` (needs `tar
 1. Import this repository in Vercel (Hobby). Framework Preset: "Other". Production branch: `main`.
 2. Build Command: `node scripts/assemble.mjs`. Output Directory: empty.
 3. Add the environment variable `GITHUB_TOKEN`, used by the build to download the repositories and by the widgets function.
-4. Settings → Git → Deploy Hooks: create one on branch `main` and store its URL as the lab secret `VERCEL_DEPLOY_HOOK`.
+4. Settings → Git → Deploy Hooks: create one on branch `main` and store its URL as the secret `LAB_DEPLOY_HOOK` of every project repository.
 5. Add the domain `lab.nawi.dev`.
 6. In Porkbun, add a DNS CNAME record: `lab` → `cname.vercel-dns.com`.
