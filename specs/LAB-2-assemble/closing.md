@@ -9,10 +9,10 @@ Result: passed
 - S3 · "el lab en si es una poc, pero los proyectos de dentro pueden estar en lo que esten"
 
 ## Assumptions
-- LAB-2-ASM-01 · one Vercel project, the lab's, serves everything: a workflow of the lab checks out the main branch of every repository in experiments.json, copies what each one publishes into /<slug>/, adds the functions of profile-widgets under /api/profile/, and pushes the result to a `deploy` branch that Vercel uses as its production branch · S1
-- LAB-2-ASM-02 · each entry of experiments.json says what its repository publishes: `dir` (a folder copied as is) or `include` and `exclude` globs from the root; a `functions` entry copies api/ and src/ of its repository to the root of the deploy · S1, S3
-- LAB-2-ASM-03 · the workflow runs on a push to the lab's main, by hand, and on a `project-updated` repository dispatch that each project sends when its main changes (the deploy branch records the commit of each repository) · S2, L2
-- LAB-2-ASM-04 · the proxy rewrites to GitHub Pages and to profile-widgets.vercel.app leave vercel.json; /<slug> still redirects to /<slug>/ · S1
+- LAB-2-ASM-01 · one Vercel project, the lab's, serves everything: the Vercel build of the lab (`node scripts/assemble.mjs`) downloads the main branch of every repository in experiments.json, copies what each one publishes into /<slug>/ and adds the functions of profile-widgets under /api/profile/, as a Build Output; no build artifact is committed · S1
+- LAB-2-ASM-02 · each entry of experiments.json says what its repository publishes: `dir` (a folder copied as is) or `include` and `exclude` globs from the root; a `functions` entry copies api/ and src/ of its repository into a function of the deploy · S1, S3
+- LAB-2-ASM-03 · the lab's workflow runs by hand and on a `project-updated` repository dispatch that each project sends when its main changes; it only triggers a Vercel Deploy Hook, and a push to the lab's main deploys through the Git integration (the build records the commit of each repository) · S2, L2
+- LAB-2-ASM-04 · the proxy rewrites to GitHub Pages and to profile-widgets.vercel.app leave the lab's routing; /<slug> still redirects to /<slug>/ · S1
 - LAB-2-ASM-05 · each project keeps its own repository, grade and tests; the lab only copies what they publish · S3
 
 ## Capture round
@@ -22,7 +22,7 @@ passed — the capture round passed
 none
 
 Grade: poc — the lab is a set of experiments: it stays a proof of concept
-close.mjs seal: LAB-2 sha256:2cc4e017dab3f7a7b01ac3ffa0a568b49480b08cbd02a5c4f1db6ab0ab7886da
+close.mjs seal: LAB-2 sha256:cc80d2a2e761e4f0c0b4c016b218027b35fd2cf099fea607d53500033e304e28
 <!-- close.mjs:end -->
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
