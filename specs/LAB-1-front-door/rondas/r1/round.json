@@ -2,11 +2,7 @@
  "url": "http://localhost:52357/",
  "intent": null,
  "kind": "landing",
- "brand": {
-  "file": "specs/LAB-1-front-door/card.md",
-  "fonts": [],
-  "sheetHash": "84249d590dd77f9c7739384c9a376a67213cf53a711f00fd6fa857e0aa78e29d"
- },
+ "brand": null,
  "gpu": false,
  "path": "non-gpu",
  "cta": {
@@ -28,7 +24,7 @@
     "displayPx": 48,
     "ratio": 2.67,
     "displayLineHeight": 1.15,
-    "displayTrackingEm": 0,
+    "displayTrackingEm": -0.02,
     "displaySample": "h1 \"Experiments by Nahue\"",
     "displayLate": false,
     "bodyTrackingEm": 0,
@@ -45,13 +41,7 @@
    "responsive": {
     "width": 1440,
     "tapSmall": [
-     "a.skip 229x43",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38"
+     "a.skip 229x43"
     ],
     "clickSmall": [],
     "medianButton": null,
@@ -90,9 +80,9 @@
     },
     {
      "rule": "display tracking (em)",
-     "value": 0,
+     "value": -0.02,
      "range": "-0.03..-0.02",
-     "pass": false
+     "pass": true
     },
     {
      "rule": "body tracking (em)",
@@ -142,20 +132,22 @@
     },
     {
      "rule": "frames with 2+ flags",
-     "value": 1,
+     "value": 2,
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: focal 2% under 15%; 5 compete (max 3); 91% empty (max 70%)"
+      "frame 1: focal 2% under 15%; 5 compete (max 3); 90% empty (max 70%)",
+      "frame 2: focal 2% under 15%; 5 compete (max 3); 91% empty (max 70%)"
      ]
     },
     {
      "rule": "void frames (>70% empty, no focal)",
-     "value": 1,
+     "value": 2,
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: 91% empty, focal 2%"
+      "frame 1: 90% empty, focal 2%",
+      "frame 2: 91% empty, focal 2%"
      ]
     },
     {
@@ -262,7 +254,23 @@
      "focalKind": "text",
      "competing": 5,
      "axes": 3,
-     "empty": 0.909,
+     "empty": 0.898,
+     "flags": [
+      "focal 2% under 15%",
+      "5 compete (max 3)",
+      "90% empty (max 70%)"
+     ],
+     "reported": []
+    },
+    {
+     "frame": 2,
+     "y": 18,
+     "n": 11,
+     "focalShare": 0.023,
+     "focalKind": "text",
+     "competing": 5,
+     "axes": 3,
+     "empty": 0.907,
      "flags": [
       "focal 2% under 15%",
       "5 compete (max 3)",
@@ -303,7 +311,7 @@
     "displayPx": 32,
     "ratio": 1.78,
     "displayLineHeight": 1.15,
-    "displayTrackingEm": 0,
+    "displayTrackingEm": -0.02,
     "displaySample": "h1 \"Experiments by Nahue\"",
     "displayLate": false,
     "bodyTrackingEm": 0,
@@ -320,13 +328,7 @@
    "responsive": {
     "width": 390,
     "tapSmall": [
-     "a.skip 229x43",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38",
-     "a 43x38"
+     "a.skip 229x43"
     ],
     "clickSmall": [],
     "medianButton": null,
@@ -365,9 +367,9 @@
     },
     {
      "rule": "display tracking (em)",
-     "value": 0,
+     "value": -0.02,
      "range": "-0.03..-0.02",
-     "pass": false
+     "pass": true
     },
     {
      "rule": "body tracking (em)",
@@ -389,17 +391,11 @@
     },
     {
      "rule": "tap targets under 44x44",
-     "value": 7,
+     "value": 1,
      "range": "0",
      "pass": false,
      "detail": [
-      "a.skip 229x43",
-      "a 43x38",
-      "a 43x38",
-      "a 43x38",
-      "a 43x38",
-      "a 43x38",
-      "a 43x38"
+      "a.skip 229x43"
      ]
     },
     {
@@ -460,11 +456,12 @@
     },
     {
      "rule": "frames with 2+ flags",
-     "value": 1,
+     "value": 2,
      "range": "0",
      "pass": false,
      "detail": [
-      "frame 1: focal 10% under 15%; 5 compete (max 3)"
+      "frame 1: focal 10% under 15%; 5 compete (max 3)",
+      "frame 2: focal 10% under 15%; 5 compete (max 3)"
      ]
     },
     {
@@ -578,7 +575,22 @@
      "focalKind": "text",
      "competing": 5,
      "axes": 2,
-     "empty": 0.66,
+     "empty": 0.655,
+     "flags": [
+      "focal 10% under 15%",
+      "5 compete (max 3)"
+     ],
+     "reported": []
+    },
+    {
+     "frame": 2,
+     "y": 55,
+     "n": 11,
+     "focalShare": 0.096,
+     "focalKind": "text",
+     "competing": 5,
+     "axes": 2,
+     "empty": 0.658,
      "flags": [
       "focal 10% under 15%",
       "5 compete (max 3)"
@@ -615,7 +627,7 @@
  },
  "console": [
   {
-   "width": "390x844",
+   "width": "1440x900",
    "type": "error",
    "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
   }
@@ -630,15 +642,15 @@
  ],
  "load": {
   "waves": [
-   400,
-   600,
-   800
+   900,
+   1200,
+   1400
   ],
   "gapsMs": [
-   200,
+   300,
    200
   ],
-  "totalMs": 817,
+  "totalMs": 917,
   "rules": [
    {
     "rule": "load waves",
@@ -648,20 +660,20 @@
    },
    {
     "rule": "load wave gap (ms)",
-    "value": "200/200",
+    "value": "300/200",
     "range": "200-300",
     "pass": true
    },
    {
     "rule": "load total (ms)",
-    "value": 817,
+    "value": 917,
     "range": "900-2000",
-    "pass": false
+    "pass": true
    }
   ]
  },
  "motion": {
   "report": "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\motion\\report.json",
-  "staggerMs": 200
+  "staggerMs": 250
  }
 }

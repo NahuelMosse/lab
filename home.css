@@ -80,6 +80,7 @@ h1 {
   margin: 0;
   font-size: 32px;
   font-weight: 400;
+  letter-spacing: -.02em;
   line-height: 1.15;
 }
 
@@ -99,7 +100,7 @@ h1 {
   border-bottom: 2px solid color-mix(in srgb, var(--red) 50%, transparent);
   transition: border-color 600ms var(--ease), transform 600ms var(--ease);
   animation: enter 600ms var(--ease) both;
-  animation-delay: calc(var(--i) * 200ms);
+  animation-delay: calc(var(--i) * 250ms);
 }
 
 .item:hover,
@@ -130,7 +131,8 @@ h1 {
 
 .links a {
   display: inline-block;
-  padding: 8px 0;
+  min-width: 44px;
+  padding: 14px 0;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 600ms var(--ease), border-color 600ms var(--ease);
@@ -143,6 +145,11 @@ h1 {
 }
 
 .links a:active { transform: translateY(1px); }
+
+.foot a {
+  display: inline-block;
+  padding: 12px 0;
+}
 
 .foot {
   margin-top: 32px;

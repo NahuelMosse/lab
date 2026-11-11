@@ -31,3 +31,4 @@ not_read: none (no attachments or links)
 ## Log
 
 - L1 · yo queria armar el laboratorio, podria ser el momento de armarlo, lab.nawi.dev, la idea es no pagar por servidor aviso · (answer to "what is lab.nawi.dev") Osea quiero poner ahi mil paginas, tipo ahi metemos cebador, sonria y miga y ademas otras cosas que quiera levantar, como esta cosa para los svg · (answer to "where do we host it for free") Vercel Hobby (Recommended) · el lab no puede salir de poc, tenelo en cuenta · (answer to "where do the widgets live") Repo aparte en mvp (Recommended) · si el lab, descarga otros repos y muestra lo ultimo, hay que armarle actions para que se actualice con los mains de los otros repos
+- L2 · 2026-11-11 · kit: capture round fails on brand (no sheet) because the card's first commit has no ## Brand block and a later one is refused
