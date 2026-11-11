@@ -1,26 +1,12 @@
-// Writes vercel.json and the experiment list of index.html from experiments.json.
+// Writes the experiment list of index.html from experiments.json.
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const root = new URL("../", import.meta.url);
 const file = (name) => fileURLToPath(new URL(name, root));
-const { widgets, experiments } = JSON.parse(readFileSync(file("experiments.json"), "utf8"));
+const { experiments } = JSON.parse(readFileSync(file("experiments.json"), "utf8"));
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
-const vercel = {
-  cleanUrls: false,
-  redirects: experiments.map((e) => ({ source: `/${e.slug}`, destination: `/${e.slug}/`, permanent: false })),
-  rewrites: [
-    // `/:path*` does not match the bare trailing slash, so each experiment's root gets its own rule.
-    ...experiments.flatMap((e) => [
-      { source: `/${e.slug}/`, destination: e.origin },
-      { source: `/${e.slug}/:path*`, destination: `${e.origin}:path*` },
-    ]),
-    { source: "/api/profile/:path*", destination: `https://${widgets}/api/profile/:path*` },
-  ],
-};
-writeFileSync(file("vercel.json"), JSON.stringify(vercel, null, 2) + "\n");
 
 const items = experiments
   .map(

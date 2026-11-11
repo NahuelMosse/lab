@@ -1,26 +1,47 @@
 {
-  "widgets": "profile-widgets.vercel.app",
   "experiments": [
     {
       "slug": "cebador",
       "title": "Cebador",
       "line": "Landing page for a fictional sparkling mate brand, a portfolio design exercise.",
-      "origin": "https://nahuelmosse.github.io/cebador-landing/",
-      "repo": "NahuelMosse/cebador-landing"
+      "repo": "NahuelMosse/cebador-landing",
+      "include": ["**"],
+      "exclude": [
+        ".claude/**",
+        ".github/**",
+        "specs/**",
+        "test/**",
+        ".validation/**",
+        "CLAUDE.md",
+        ".mcp.json",
+        "README.md",
+        "LICENSE",
+        ".gitignore",
+        ".gitattributes"
+      ]
     },
     {
       "slug": "sonria",
       "title": "Sonría",
       "line": "One-page site for a fictional neighborhood dental clinic in Buenos Aires, with booking through WhatsApp.",
-      "origin": "https://nahuelmosse.github.io/sonria/",
-      "repo": "NahuelMosse/sonria"
+      "repo": "NahuelMosse/sonria",
+      "include": [
+        "index.html",
+        "styles.css",
+        "app.js",
+        "design/tokens.css",
+        "design/base.css",
+        "design/components/sonria.css",
+        "assets/**"
+      ]
     },
     {
       "slug": "miga",
       "title": "Miga",
       "line": "A sourdough bakery in Villa Crespo: today's bread with prices, opening hours and WhatsApp pickup orders.",
-      "origin": "https://nahuelmosse.github.io/miga/",
-      "repo": "NahuelMosse/miga"
+      "repo": "NahuelMosse/miga",
+      "dir": "src/modules/landing/presentation"
     }
-  ]
+  ],
+  "functions": [{ "repo": "NahuelMosse/profile-widgets", "copy": ["api", "src"] }]
 }
