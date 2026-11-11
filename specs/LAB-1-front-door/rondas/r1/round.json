@@ -1,0 +1,756 @@
+{
+ "url": "http://localhost:52357/",
+ "intent": null,
+ "kind": "landing",
+ "brand": {
+  "file": "DESIGN.md",
+  "fonts": [
+   "Courier Prime"
+  ],
+  "colors": [
+   "#d2231b",
+   "#c41f17",
+   "#db675e",
+   "#ede4d0",
+   "#9a9283",
+   "#0d1117",
+   "#ffffff",
+   "#0c0c0b",
+   "#6b655a"
+  ],
+  "actions": [
+   "#d2231b"
+  ],
+  "backgrounds": [
+   "#d2231b",
+   "#c41f17",
+   "#0d1117",
+   "#ffffff"
+  ],
+  "sheetHash": "4f8b9e5e8499b2cd0753e458a2e34b848d8c694732ed04ff04d17ba21e81105c"
+ },
+ "gpu": false,
+ "path": "non-gpu",
+ "cta": {
+  "1440x900": {
+   "text": "Skip to experiments",
+   "selector": "a.skip",
+   "reason": "filled control, below the first viewport, largest"
+  },
+  "390x844": {
+   "text": "Skip to experiments",
+   "selector": "a.skip",
+   "reason": "filled control, below the first viewport, largest"
+  }
+ },
+ "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 (0x00001F08) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "software": false,
+ "widths": {
+  "1440x900": {
+   "measure": {
+    "grain": false,
+    "displayPx": 48,
+    "ratio": 2.67,
+    "displayLineHeight": 1.15,
+    "displayTrackingEm": -0.02,
+    "displaySample": "h1 \"Experiments by Nahue\"",
+    "displayLate": false,
+    "bodyTrackingEm": 0,
+    "sizes": [
+     11,
+     13,
+     14,
+     18,
+     24,
+     48
+    ],
+    "sizeCount": 6
+   },
+   "responsive": {
+    "width": 1440,
+    "tapSmall": [],
+    "clickSmall": [],
+    "medianButton": null,
+    "hoverOnly": [],
+    "smallFields": [],
+    "overflow": {
+     "scrollWidth": 1440,
+     "clientWidth": 1440
+    },
+    "queries": {
+     "min": 2,
+     "max": 0
+    },
+    "coveredPct": 0,
+    "cta": {
+     "name": "a.skip 229x55",
+     "topPct": -7,
+     "bottomPct": -1,
+     "pinned": false
+    },
+    "nav": {
+     "bottomBar": false,
+     "hamburger": false,
+     "hamburgerLabeled": false
+    }
+   },
+   "rules": [
+    {
+     "rule": "display/body ratio",
+     "value": 2.67,
+     "range": "report only: winners median 2.9x, 2-9x",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display line height",
+     "value": 1.15,
+     "range": "report only: winners median 1.0",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display tracking (em)",
+     "value": -0.02,
+     "range": "-0.03..-0.02",
+     "pass": true
+    },
+    {
+     "rule": "body tracking (em)",
+     "value": 0,
+     "range": "0..0.02",
+     "pass": true
+    },
+    {
+     "rule": "font sizes, first viewport",
+     "value": 6,
+     "range": "<= 9",
+     "pass": true
+    },
+    {
+     "rule": "grain or noise",
+     "value": "no",
+     "range": "a texture, or none declared",
+     "pass": false
+    },
+    {
+     "rule": "hamburger, expanded",
+     "value": "no",
+     "range": "no",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "clicks of 24x24 or less",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "median button height",
+     "value": "no buttons",
+     "range": "< 48 (all 48+ is a stretched mobile)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "dead clicks",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "frames with 2+ flags",
+     "value": 2,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: focal 2% under 15%; 7 compete (max 3); 87% empty (max 70%)",
+      "frame 2: focal 2% under 15%; 7 compete (max 3); 88% empty (max 70%)"
+     ]
+    },
+    {
+     "rule": "void frames (>70% empty, no focal)",
+     "value": 2,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: 87% empty, focal 2%",
+      "frame 2: 88% empty, focal 2%"
+     ]
+    },
+    {
+     "rule": "image file width >= shown x 2",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "pasted boxes",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "repeated images",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "broken images (naturalWidth 0)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "alt text painted as page text",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "LCP image",
+     "value": "not an image",
+     "range": "n/a",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: CTA separation (OKLCH)",
+     "value": 0,
+     "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
+     "pass": false,
+     "detail": [
+      "CTA a.skip \"Skip to experiments\" fill #c41f17 L 0.53",
+      "adjacent background #ffffff L 1.00: ΔL 0.47 ΔC 0.20 Δh 61°",
+      "body text #6b655a L 0.51: ΔL 0.02 ΔC 0.18 Δh 54°",
+      "muted text #c41f17 L 0.53: ΔL 0.00 ΔC 0.00 Δh 0°"
+     ]
+    },
+    {
+     "rule": "palette: accent reserved",
+     "value": 0,
+     "range": "<= 2 other controls (the accent also colors non-actions)",
+     "pass": true,
+     "detail": [
+      "non-action p.brand \"lab.nawi.dev\""
+     ]
+    },
+    {
+     "rule": "palette: roles",
+     "value": "5 text / 1 background",
+     "range": "report only: text colors and background colors apart",
+     "pass": true,
+     "detail": [
+      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51, #10100f L 0.17, #6e685d L 0.52",
+      "background #ffffff L 1.00"
+     ],
+     "report": true
+    },
+    {
+     "rule": "palette: text contrast (WCAG AA)",
+     "value": 0,
+     "range": "0 pairs under 4.5:1 (3:1 large)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: APCA Lc (report)",
+     "value": 78,
+     "range": "reported: body >= 75, loose text >= 30",
+     "pass": true,
+     "detail": [
+      "p.brand \"lab.nawi.dev\" #c41f17 on #ffffff Lc 78 (11px)",
+      "p \"A sourdough bakery i\" #6e685d on #ffffff Lc 78 (18px)",
+      "p \"Landing page for a f\" #6b655a on #ffffff Lc 79 (18px)",
+      "h2 \"Miga\" #10100f on #ffffff Lc 105 (24px)",
+      "a \"Open\" #10100f on #ffffff Lc 105 (13px)"
+     ]
+    },
+    {
+     "rule": "brand: fonts in the brand sheet",
+     "value": 0,
+     "range": "0 families outside Courier Prime",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "brand: primary action color in the brand sheet",
+     "value": 0.03,
+     "range": "<= 0.06 OKLab from an action color of the sheet",
+     "pass": true,
+     "detail": [
+      "primary action #c41f17, nearest #d2231b (ΔL 0.029, tint 0.010)"
+     ]
+    },
+    {
+     "rule": "brand: page background color in the brand sheet",
+     "value": 0,
+     "range": "tint <= 0.008 and lightness <= 0.03 from a background color of the sheet",
+     "pass": true,
+     "detail": [
+      "page background #ffffff, nearest #ffffff (ΔL 0.000, tint 0.000)"
+     ]
+    }
+   ],
+   "frames": [
+    {
+     "frame": 1,
+     "y": 0,
+     "n": 12,
+     "focalShare": 0.023,
+     "focalKind": "text",
+     "competing": 7,
+     "axes": 3,
+     "empty": 0.869,
+     "flags": [
+      "focal 2% under 15%",
+      "7 compete (max 3)",
+      "87% empty (max 70%)"
+     ],
+     "reported": []
+    },
+    {
+     "frame": 2,
+     "y": 76,
+     "n": 12,
+     "focalShare": 0.023,
+     "focalKind": "text",
+     "competing": 7,
+     "axes": 3,
+     "empty": 0.876,
+     "flags": [
+      "focal 2% under 15%",
+      "7 compete (max 3)",
+      "88% empty (max 70%)"
+     ],
+     "reported": []
+    }
+   ],
+   "images": {
+    "low": [],
+    "pasted": [],
+    "unknown": [],
+    "repeated": [],
+    "lcp": null,
+    "sizes": [],
+    "broken": [],
+    "altShown": []
+   },
+   "sweep": {
+    "checked": 8,
+    "dead": []
+   },
+   "canvas": [],
+   "scrub": null,
+   "layout": {
+    "hero": {
+     "n": 12,
+     "span": 0.442,
+     "widest": 0.442
+    },
+    "sections": []
+   },
+   "product": null
+  },
+  "390x844": {
+   "measure": {
+    "grain": false,
+    "displayPx": 32,
+    "ratio": 1.78,
+    "displayLineHeight": 1.15,
+    "displayTrackingEm": -0.02,
+    "displaySample": "h1 \"Experiments by Nahue\"",
+    "displayLate": false,
+    "bodyTrackingEm": 0,
+    "sizes": [
+     11,
+     13,
+     18,
+     24,
+     32
+    ],
+    "sizeCount": 5
+   },
+   "responsive": {
+    "width": 390,
+    "tapSmall": [],
+    "clickSmall": [],
+    "medianButton": null,
+    "hoverOnly": [],
+    "smallFields": [],
+    "overflow": {
+     "scrollWidth": 390,
+     "clientWidth": 390
+    },
+    "queries": {
+     "min": 2,
+     "max": 0
+    },
+    "coveredPct": 0,
+    "cta": {
+     "name": "a.skip 229x55",
+     "topPct": -8,
+     "bottomPct": -1,
+     "pinned": false
+    },
+    "nav": {
+     "bottomBar": false,
+     "hamburger": false,
+     "hamburgerLabeled": false
+    }
+   },
+   "rules": [
+    {
+     "rule": "display/body ratio",
+     "value": 1.78,
+     "range": "report only: winners median 2.9x, 2-9x",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display line height",
+     "value": 1.15,
+     "range": "report only: winners median 1.0",
+     "pass": true,
+     "report": true
+    },
+    {
+     "rule": "display tracking (em)",
+     "value": -0.02,
+     "range": "-0.03..-0.02",
+     "pass": true
+    },
+    {
+     "rule": "body tracking (em)",
+     "value": 0,
+     "range": "0..0.02",
+     "pass": true
+    },
+    {
+     "rule": "font sizes, first viewport",
+     "value": 5,
+     "range": "<= 9",
+     "pass": true
+    },
+    {
+     "rule": "grain or noise",
+     "value": "no",
+     "range": "a texture, or none declared",
+     "pass": false
+    },
+    {
+     "rule": "tap targets under 44x44",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "hover-only reveals",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "inputs under 16 px",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "document overflow",
+     "value": "none",
+     "range": "none",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "media queries",
+     "value": "min 2 / max 0",
+     "range": "min >= max",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "fixed layers (% of viewport, no canvas or scene)",
+     "value": 0,
+     "range": "<= 20",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "cta in first viewport (% of height)",
+     "value": "-8--1",
+     "range": "inside the first viewport; lower half recommended",
+     "pass": true,
+     "detail": [
+      "a.skip 229x55"
+     ],
+     "warn": true
+    },
+    {
+     "rule": "navigation, compact",
+     "value": "none",
+     "range": "bottom bar or labeled menu",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "dead clicks",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "frames with 2+ flags",
+     "value": 2,
+     "range": "0",
+     "pass": false,
+     "detail": [
+      "frame 1: focal 10% under 15%; 7 compete (max 3)",
+      "frame 2: focal 10% under 15%; 7 compete (max 3)"
+     ]
+    },
+    {
+     "rule": "void frames (>70% empty, no focal)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "image file width >= shown x 2",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "pasted boxes",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "repeated images",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "broken images (naturalWidth 0)",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "alt text painted as page text",
+     "value": 0,
+     "range": "0",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "LCP image",
+     "value": "not an image",
+     "range": "n/a",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: CTA separation (OKLCH)",
+     "value": 0,
+     "range": ">= 1: ΔL 0.15, or ΔC 0.08, or hue 40° (both chromatic) from adjacent background, body and muted text",
+     "pass": false,
+     "detail": [
+      "CTA a.skip \"Skip to experiments\" fill #c41f17 L 0.53",
+      "adjacent background #ffffff L 1.00: ΔL 0.47 ΔC 0.20 Δh 61°",
+      "body text #6b655a L 0.51: ΔL 0.02 ΔC 0.18 Δh 54°",
+      "muted text #c41f17 L 0.53: ΔL 0.00 ΔC 0.00 Δh 0°"
+     ]
+    },
+    {
+     "rule": "palette: accent reserved",
+     "value": 0,
+     "range": "<= 2 other controls (the accent also colors non-actions)",
+     "pass": true,
+     "detail": [
+      "non-action p.brand \"lab.nawi.dev\""
+     ]
+    },
+    {
+     "rule": "palette: roles",
+     "value": "3 text / 1 background",
+     "range": "report only: text colors and background colors apart",
+     "pass": true,
+     "detail": [
+      "text #c41f17 L 0.53, #0c0c0b L 0.15, #6b655a L 0.51",
+      "background #ffffff L 1.00"
+     ],
+     "report": true
+    },
+    {
+     "rule": "palette: text contrast (WCAG AA)",
+     "value": 0,
+     "range": "0 pairs under 4.5:1 (3:1 large)",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "palette: APCA Lc (report)",
+     "value": 78,
+     "range": "reported: body >= 75, loose text >= 30",
+     "pass": true,
+     "detail": [
+      "p.brand \"lab.nawi.dev\" #c41f17 on #ffffff Lc 78 (11px)",
+      "p \"Landing page for a f\" #6b655a on #ffffff Lc 79 (18px)",
+      "h1 \"Experiments by Nahue\" #0c0c0b on #ffffff Lc 106 (32px)",
+      "a \"Open\" #0c0c0b on #ffffff Lc 106 (13px)"
+     ]
+    },
+    {
+     "rule": "brand: fonts in the brand sheet",
+     "value": 0,
+     "range": "0 families outside Courier Prime",
+     "pass": true,
+     "detail": []
+    },
+    {
+     "rule": "brand: primary action color in the brand sheet",
+     "value": 0.03,
+     "range": "<= 0.06 OKLab from an action color of the sheet",
+     "pass": true,
+     "detail": [
+      "primary action #c41f17, nearest #d2231b (ΔL 0.029, tint 0.010)"
+     ]
+    },
+    {
+     "rule": "brand: page background color in the brand sheet",
+     "value": 0,
+     "range": "tint <= 0.008 and lightness <= 0.03 from a background color of the sheet",
+     "pass": true,
+     "detail": [
+      "page background #ffffff, nearest #ffffff (ΔL 0.000, tint 0.000)"
+     ]
+    }
+   ],
+   "frames": [
+    {
+     "frame": 1,
+     "y": 0,
+     "n": 10,
+     "focalShare": 0.096,
+     "focalKind": "text",
+     "competing": 7,
+     "axes": 2,
+     "empty": 0.572,
+     "flags": [
+      "focal 10% under 15%",
+      "7 compete (max 3)"
+     ],
+     "reported": []
+    },
+    {
+     "frame": 2,
+     "y": 167,
+     "n": 12,
+     "focalShare": 0.096,
+     "focalKind": "text",
+     "competing": 7,
+     "axes": 2,
+     "empty": 0.557,
+     "flags": [
+      "focal 10% under 15%",
+      "7 compete (max 3)"
+     ],
+     "reported": []
+    }
+   ],
+   "images": {
+    "low": [],
+    "pasted": [],
+    "unknown": [],
+    "repeated": [],
+    "lcp": null,
+    "sizes": [],
+    "broken": [],
+    "altShown": []
+   },
+   "sweep": {
+    "checked": 8,
+    "dead": []
+   },
+   "canvas": [],
+   "scrub": null,
+   "layout": {
+    "hero": {
+     "n": 12,
+     "span": 0.913,
+     "widest": 0.913
+    },
+    "sections": []
+   },
+   "product": null
+  }
+ },
+ "console": [],
+ "captures": [
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-0600ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\1440x900\\load-2000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-0000ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-0600ms.png",
+  "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\390x844\\load-2000ms.png"
+ ],
+ "load": {
+  "waves": [
+   800,
+   1000,
+   1300
+  ],
+  "gapsMs": [
+   200,
+   300
+  ],
+  "totalMs": 917,
+  "rules": [
+   {
+    "rule": "load waves",
+    "value": 3,
+    "range": "2-3",
+    "pass": true
+   },
+   {
+    "rule": "load wave gap (ms)",
+    "value": "200/300",
+    "range": "200-300",
+    "pass": true
+   },
+   {
+    "rule": "load total (ms)",
+    "value": 917,
+    "range": "900-2000",
+    "pass": true
+   }
+  ]
+ },
+ "motion": {
+  "report": "D:\\projects\\lab\\specs\\LAB-1-front-door\\rondas\\r1\\motion\\report.json",
+  "staggerMs": 250
+ }
+}
