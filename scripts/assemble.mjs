@@ -123,7 +123,7 @@ try {
     console.log(`${e.slug}: ${listFiles(dest).length} files`);
   }
 
-  const routes = experiments.map((e) => ({ src: `^/${e.slug}$`, status: 307, headers: { Location: `/${e.slug}/` } }));
+  const routes = [...experiments.map((e) => e.slug), "tools"].map((slug) => ({ src: `^/${slug}$`, status: 307, headers: { Location: `/${slug}/` } }));
   const functionRoutes = [];
   for (const f of functions) {
     const dir = await download(f.repo);
@@ -143,7 +143,7 @@ try {
     console.log(`${f.repo}: ${f.copy.join(", ")} -> ${f.path}`);
   }
 
-  for (const p of ["index.html", "home.css", "favicon.svg", "fonts"]) cpSync(join(root, p), join(staticDir, p), { recursive: true });
+  for (const p of ["index.html", "home.css", "favicon.svg", "fonts", "tools", "og"]) cpSync(join(root, p), join(staticDir, p), { recursive: true });
 
   writeFileSync(
     join(out, "config.json"),

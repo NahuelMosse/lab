@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools · lab.nawi.dev</title>
+  <meta name="description" content="Three open-source tools that check a web UI, an HTTP API and database migrations: a demo, what each one finds and how to install it.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="lab.nawi.dev">
+  <meta property="og:title" content="Tools · lab.nawi.dev">
+  <meta property="og:description" content="motion-audit, http-attack and migrations-safe: a demo, what each one finds and how to install it as a CLI or a Claude Code skill.">
+  <meta property="og:url" content="https://lab.nawi.dev/tools/">
+  <meta property="og:image" content="https://lab.nawi.dev/og/tools.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tools: motion-audit, http-attack, migrations-safe. lab.nawi.dev/tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tools · lab.nawi.dev">
+  <meta name="twitter:description" content="motion-audit, http-attack and migrations-safe: a demo, what each one finds and how to install it as a CLI or a Claude Code skill.">
+  <meta name="twitter:image" content="https://lab.nawi.dev/og/tools.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/courier-prime-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/tools/tools.css">
+</head>
+<body>
+  <a class="skip" href="#tools">Skip to the tools</a>
+  <header class="head">
+    <p class="brand"><a href="/">lab.nawi.dev</a></p>
+    <h1>Tools</h1>
+    <p class="intro">Three open-source checks I run on my own work, as a CLI and as a Claude Code skill.</p>
+  </header>
+  <main id="tools">
+    <ul class="list">
+      <li class="item" style="--i:0">
+        <h2>motion-audit</h2>
+        <p>Audit how a running web UI moves in a real browser: missing hover, press and focus feedback, snapping transitions, jank, wrong easing and reduced-motion gaps.</p>
+        <video controls muted playsinline preload="none" poster="/tools/media/motion-audit-poster.png" width="1920" height="1080" aria-label="Screen recording of motion-audit run in a terminal against a demo shop page, listing buttons with no hover feedback, snapping transitions and reduced-motion gaps">
+          <source src="/tools/media/motion-audit-16x9.mp4" type="video/mp4">
+        </video>
+        <h3>What it finds</h3>
+        <ul class="finds">
+          <li>Buttons where nothing visible changes on hover or press</li>
+          <li>Transitions that snap, ease in late or animate layout (width, top)</li>
+          <li>Elements that still move, or loop forever, with reduced motion on</li>
+        </ul>
+        <h3>Install as a CLI</h3>
+        <pre><code tabindex="0">npm i -D motion-audit playwright
+npx playwright install chromium
+npx motion-audit http://localhost:3000</code></pre>
+        <h3>Install as a Claude Code skill</h3>
+        <pre><code tabindex="0">claude plugin marketplace add NahuelMosse/motion-audit
+claude plugin install motion-audit@motion-audit</code></pre>
+        <p class="links">
+          <a href="https://www.npmjs.com/package/motion-audit">npm<span class="sr"> package of motion-audit</span></a>
+          <a href="https://github.com/NahuelMosse/motion-audit">GitHub<span class="sr"> repository of motion-audit</span></a>
+        </p>
+      </li>
+      <li class="item" style="--i:1">
+        <h2>http-attack</h2>
+        <p>Adversarially probe a local HTTP API for what unit tests miss: 5xx on bad input, races on creates, unbounded bodies, SQL injection, IDOR and CSRF.</p>
+        <video controls muted playsinline preload="none" poster="/tools/media/http-attack-poster.png" width="1920" height="1080" aria-label="Screen recording of http-attack run in a terminal against a demo API, listing the failed probes: a search that reaches LIKE unescaped, a 500 on malformed JSON and a 1 MB body accepted">
+          <source src="/tools/media/http-attack-16x9.mp4" type="video/mp4">
+        </video>
+        <h3>What it finds</h3>
+        <ul class="finds">
+          <li>A search that reaches LIKE unescaped: <code>?q=%</code> matches rows</li>
+          <li>Malformed JSON answered with a 500 and a stack trace</li>
+          <li>A 1 MB body accepted where the answer should be 413</li>
+        </ul>
+        <h3>Install as a CLI</h3>
+        <pre><code tabindex="0">npm i -D http-attack
+npx http-attack http://127.0.0.1:3000</code></pre>
+        <h3>Install as a Claude Code skill</h3>
+        <pre><code tabindex="0">claude plugin marketplace add NahuelMosse/http-attack
+claude plugin install http-attack@http-attack</code></pre>
+        <p class="links">
+          <a href="https://www.npmjs.com/package/http-attack">npm<span class="sr"> package of http-attack</span></a>
+          <a href="https://github.com/NahuelMosse/http-attack">GitHub<span class="sr"> repository of http-attack</span></a>
+        </p>
+      </li>
+      <li class="item" style="--i:2">
+        <h2>migrations-safe</h2>
+        <p>Write and review database migrations that keep data, running code and busy tables safe, across PostgreSQL, MySQL, SQLite, SQL Server, Oracle and Db2.</p>
+        <video controls muted playsinline preload="none" poster="/tools/media/migrations-safe-poster.png" width="1920" height="1080" aria-label="Screen recording of migrations-safe linting a folder of SQL migrations in a terminal, listing a dropped column, a NOT NULL column without a default and an index built without CONCURRENTLY">
+          <source src="/tools/media/migrations-safe-16x9.mp4" type="video/mp4">
+        </video>
+        <h3>What it finds</h3>
+        <ul class="finds">
+          <li>A dropped column the running code still reads or writes</li>
+          <li>A NOT NULL column with no default added to a populated table</li>
+          <li>An index built without CONCURRENTLY, blocking writes</li>
+        </ul>
+        <h3>Install as a CLI</h3>
+        <pre><code tabindex="0">npm i -D migrations-safe
+npx migrations-safe lint db/migrations/</code></pre>
+        <h3>Install as a Claude Code skill</h3>
+        <pre><code tabindex="0">claude plugin marketplace add NahuelMosse/migrations-safe
+claude plugin install migrations-safe@migrations-safe</code></pre>
+        <p class="links">
+          <a href="https://www.npmjs.com/package/migrations-safe">npm<span class="sr"> package of migrations-safe</span></a>
+          <a href="https://github.com/NahuelMosse/migrations-safe">GitHub<span class="sr"> repository of migrations-safe</span></a>
+        </p>
+      </li>
+    </ul>
+  </main>
+  <footer class="foot">
+    <a href="/">lab.nawi.dev</a> · <a href="https://nawi.dev">nawi.dev</a>
+  </footer>
+</body>
+</html>

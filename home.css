@@ -88,6 +88,16 @@ h1 {
   h1 { font-size: 48px; }
 }
 
+.more {
+  margin: 12px 0 0;
+  color: var(--dim);
+}
+
+.more a {
+  display: inline-block;
+  padding: 12px 0;
+}
+
 .list {
   margin: 0;
   padding: 0;
